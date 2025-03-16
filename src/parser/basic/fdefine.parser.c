@@ -19,7 +19,7 @@ CArgvParse newCArgvParse(int argc, char **argv){
     return cArgvPars;
 }
 
-const char *CArgvPars_get_arg(CArgvParse *self,int index){
+const char *CArgvParse_get_arg(CArgvParse *self,int index){
     if(index < self->total_args){
         private_CArgvParse_add_used(self,index);
         return self->args[index];
