@@ -15,6 +15,7 @@ CArgvParse newCArgvPars(int argc, char **argv){
 
 const char *CArgvPars_get_arg(CArgvParse *self,int index){
     if(index < self->total_args){
+        private_CArgvParse_add_used(self,index);
         return self->args[index];
     }
     return C_ARGV_PARSER_NULL;
