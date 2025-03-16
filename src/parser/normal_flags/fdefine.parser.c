@@ -27,16 +27,26 @@ const char * CArgvPars_get_flag(CArgvParse *self ,const char **flags,int flags_s
         if(!its_flag){
             continue;
         }
+        const char *formmated_flag_comparaton_flag = current_arg + identifier_start_size;
+        int formmated_flag_comparaton_flag_size = current_arg_size-identifier_start_size;
 
         for(int j = 0; j < flags_size;j++){
             const char *flag = flags[j];
             int flag_size = privateArgv_parser_string_size(flag);
-            const char *formmated_flag_comparaton_flag = current_arg+identifier_start_size;
-            int formmated_flag_comparaton_flag_size = current_arg_size-identifier_start_size;
-            c_argv_bool is_the_current_flag = privateArgv_strings_equals(formmated_flag_comparaton_flag,formmated_flag_comparaton_flag_size,flag,flag_size);
+
+            c_argv_bool is_the_current_flag = privateArgv_strings_equals(
+                formmated_flag_comparaton_flag,
+                formmated_flag_comparaton_flag_size,
+                flag,
+                flag_size
+            );
             if(is_the_current_flag){
+
                 if(found == index){
-                const  char *next = self->args[i+1];
+
+                    private_CArgvParse_add_used(self,i);
+                    private_CArgvParse_add_used(self,i+1);
+                    const  char *next = self->args[i+1];
                     return next;
                 }
                 found++;
