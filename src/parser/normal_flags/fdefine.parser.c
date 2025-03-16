@@ -1,21 +1,14 @@
+//silver_chain_scope_start
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
+#include "../../imports/imports.fdeclare.h"
+//silver_chain_scope_end
 
 
 
 
-
-int privateCArgv_parser_get_flag_identifier_start_size(CArgvParse *self,const char *flag,int flag_size){
-    for(int i = 0; i < self->total_flag_indentifiers; i++){
-        const char *current_identifier = self->flag_identifiers[i];
-        int current_identifier_size = privateArgv_parser_string_size(current_identifier);
-        if(privateArgv_parsser_starts_with(flag,flag_size,current_identifier,current_identifier_size)){
-            return current_identifier_size;
-        }
-    }
-    return -1;
-}
-
-
-int CArgvPars_get_flag_size(CArgvParse *self,const char **flags,int flags_size){
+int CArgvParse_get_flag_size(CArgvParse *self,const char **flags,int flags_size){
     int found=0;
     for(int i = 0; i < self->total_args-1; i++){
 
@@ -43,6 +36,7 @@ int CArgvPars_get_flag_size(CArgvParse *self,const char **flags,int flags_size){
             );
             if(is_the_current_flag){
                 found++;
+                break;
             }
         }
 
@@ -51,7 +45,7 @@ int CArgvPars_get_flag_size(CArgvParse *self,const char **flags,int flags_size){
 }    
 
 
-const char * CArgvPars_get_flag(CArgvParse *self ,const char **flags,int flags_size, int index){
+const char * CArgvParse_get_flag(CArgvParse *self ,const char **flags,int flags_size, int index){
     int found=0;
     for(int i = 0; i < self->total_args-1; i++){
 
@@ -87,6 +81,7 @@ const char * CArgvPars_get_flag(CArgvParse *self ,const char **flags,int flags_s
                     return next;
                 }
                 found++;
+                break;
             }
         }
 

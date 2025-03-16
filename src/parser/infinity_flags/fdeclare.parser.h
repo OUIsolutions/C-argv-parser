@@ -6,11 +6,6 @@
 //silver_chain_scope_end
 
 
-c_argv_bool private_CArgvParse_its_used(CArgvParse *self,int index);
+int CArgvPars_get_infinity_flag_size(CArgvParse *self,const char **flags,int flags_size);
 
-
-void private_CArgvParse_add_used(CArgvParse *self,int index);
-
-
-
-const char *CArgvParse_get_next_unused_arg(CArgvParse *self);
+const char * CArgvPars_get_infinty_flag(CArgvParse *self ,const char **flags,int flags_size, int index);
