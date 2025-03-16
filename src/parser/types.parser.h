@@ -1,12 +1,12 @@
 
 
-typedef struct CArgvPars{
+typedef struct CArgvParse{
 
     int used_flags[C_ARGV_PARSER_MAX_FLAGS];
-    const char **flags;
-    int flags_size;
+     char **args;
+    int total_args;
 
     const char **flag_identifiers;
-    int flag_identifiers_size;
+    int total_flag_indentifiers;
 
- }CArgvPars;
+ }CArgvParse;

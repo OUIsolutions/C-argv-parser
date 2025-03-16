@@ -1,10 +1,12 @@
 
 
 
-CArgvPars newCArgvPars(const char **flags,int flags_size);
-
-const char *CArgvPars_get_arg(CArgvPars *self,int index);
-
-const char * CArgvPars_get_flag(CArgvPars *self,const char *flag,int index);
 
 
+CArgvParse newCArgvPars(int argc, char **argv);
+
+const char *CArgvPars_get_arg(CArgvParse *self,int index);
+
+int privateCArgv_parser_get_flag_identifier_start_size(CArgvParse *self,const char *flag,int flag_size);
+
+const char * CArgvPars_get_flag(CArgvParse *self,const char *flag,int index);
