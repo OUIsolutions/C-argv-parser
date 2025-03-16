@@ -14,5 +14,6 @@ CArgvParseNamespace newCArgvParseNamespace(){
     self.get_flag = CArgvParse_get_flag;
     self.get_next_unused_arg = CArgvParse_get_next_unused_arg;
     self.is_flags_present = CArgvParse_is_flags_present;
+    self.is_one_of_args_present = CArgvParse_is_one_of_args_present;
     return self;   
 }

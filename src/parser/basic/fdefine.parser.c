@@ -76,3 +76,26 @@ int privateCArgv_parser_get_flag_identifier_start_size(CArgvParse *self,const ch
     }
     return -1;
 }
+c_argv_bool CArgvParse_is_one_of_args_present(CArgvParse *self,const char **args,int args_size){
+    for(int i = 0; i < self->total_args; i++){
+        const char *current_arg = self->args[i];
+
+        
+        int current_arg_size = privateArgv_parser_string_size(current_arg);
+        for(int j = 0; j < args_size;j++){
+            const char *arg = args[j];
+            int arg_size = privateArgv_parser_string_size(arg);
+            c_argv_bool is_the_current_arg = privateArgv_strings_equals(
+                current_arg,
+                current_arg_size,
+                arg,
+                arg_size
+            );
+            if(is_the_current_arg){
+                private_CArgvParse_add_used(self,i);
+                return C_ARGV_PARSER_TRUE;
+            }
+        }
+    }
+    return C_ARGV_PARSER_FALSE;
+}
