@@ -5,7 +5,7 @@
 
 
 CArgvParse newCArgvPars(int argc, char **argv){
-    CArgvParse cArgvPars;
+    CArgvParse cArgvPars ={0};
     cArgvPars.args = argv;
     cArgvPars.total_args = argc;
     cArgvPars.flag_identifiers = CArgvPars_defult_identifiers;
