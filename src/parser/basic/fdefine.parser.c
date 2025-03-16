@@ -53,6 +53,7 @@ c_argv_bool CArgvParse_is_flags_present(CArgvParse *self,const char **flags,int 
                 flag_size
             );
             if(is_the_current_flag){
+                private_CArgvParse_add_used(self,i);
                 return C_ARGV_PARSER_TRUE;
             }
         }
