@@ -12,6 +12,6 @@ typedef struct CArgvParseNamespace{
     int (*get_flag_size)(CArgvParse *self,const char **flags,int flags_size);
     const char * (*get_flag)(CArgvParse *self ,const char **flags,int flags_size, int index);
     const char *(*get_next_unused_arg)(CArgvParse *self);
-
+    c_argv_bool (*is_flags_present)(CArgvParse *self,const char **flag,int flags_size);
 
 }CArgvParseNamespace;

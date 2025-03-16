@@ -61,3 +61,25 @@ the output will be:
 ```bash
 output flags found: 2
 ```
+
+### Verify if flag exists
+you can verify if the flag exists by using the function `CArgvParse_is_flags_present` 
+```c
+
+#include "src/one.c"
+#include <stdio.h>
+
+
+CArgvParseNamespace argv_namespace;
+int main(int argc, char *argv[]){
+    argv_namespace = newCArgvParseNamespace();
+    CArgvParse args = argv_namespace.newCArgvParse(argc,argv);
+
+    const char* help[] = {"help","h"};
+    int total_output_flags = sizeof(help)/sizeof(char*);
+    if(argv_namespace.is_flags_present(&args,help,total_output_flags)){
+        printf("Help\n");
+    }
+    
+}
+```
