@@ -3,23 +3,6 @@
 
 
 
-
-CArgvParse newCArgvPars(int argc, char **argv){
-    CArgvParse cArgvPars;
-    cArgvPars.args = argv;
-    cArgvPars.total_args = argc;
-    cArgvPars.flag_identifiers = CArgvPars_defult_identifiers;
-    cArgvPars.total_flag_indentifiers = CArgvPars_defult_identifiers_size;
-    return cArgvPars;
-}
-
-const char *CArgvPars_get_arg(CArgvParse *self,int index){
-    if(index < self->total_args){
-        return self->args[index];
-    }
-    return C_ARGV_PARSER_NULL;
-}
-
 int privateCArgv_parser_get_flag_identifier_start_size(CArgvParse *self,const char *flag,int flag_size){
     for(int i = 0; i < self->total_flag_indentifiers; i++){
         const char *current_identifier = self->flag_identifiers[i];
