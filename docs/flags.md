@@ -6,7 +6,7 @@ and the target index of the flag
 
 ```c
 
-#include "src/one.c"
+#include "CArgvParseOne.c"
 #include <stdio.h>
 
 
@@ -37,7 +37,7 @@ output: test
 
 you can get the size of the flags by using the function `CArgvParse_get_flag_size` 
 ```c
-#include "src/one.c"
+#include "CArgvParseOne.c"
 #include <stdio.h>
 
 
@@ -66,7 +66,7 @@ output flags found: 2
 you can verify if the flag exists by using the function `CArgvParse_is_flags_present` 
 ```c
 
-#include "src/one.c"
+#include "CArgvParseOne.c"
 #include <stdio.h>
 
 

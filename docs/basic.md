@@ -3,7 +3,7 @@
 for use the lib , you just need to start the main struct with the `newCArgvParse` function, and then you can use the functions to get the flags and the arguments.
 
 ```c
-#include "src/one.c"
+#include "CArgvParseOne.c"
 #include <stdio.h>
 
 
@@ -20,7 +20,7 @@ int main(int argc, char *argv[]){
 you can get the arguments by using the function `CArgvParse_get_arg` and specifing the index of the argument you want to get.
 
 ```c
-#include "src/one.c"
+#include "CArgvParseOne.c"
 #include <stdio.h>
 
 
@@ -41,7 +41,7 @@ you can verify if a argument is present by using the function `CArgvParse_is_one
 
 ```c
 
-#include "src/one.c"
+#include "CArgvParseOne.c"
 #include <stdio.h>
 
 

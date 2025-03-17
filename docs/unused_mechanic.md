@@ -8,7 +8,7 @@ its basicly works by retriving the next unused item,considering args or flags
 
 ```c
 
-#include "src/one.c"
+#include "CArgvParseOne.c"
 #include <stdio.h>
 CArgvParseNamespace argv_namespace;
 int main(int argc, char *argv[]){
@@ -28,7 +28,7 @@ these example simulates the gcc compiler,where you can pass multiple flags and a
 ```c
 
 #include <stdio.h>
-#include "src/one.c"
+#include "CArgvParseOne.c"
 #include <stdbool.h>
 
 CArgvParseNamespace argv_namespace;
