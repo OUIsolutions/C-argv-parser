@@ -1,6 +1,6 @@
 
-#ifndef C_ARGV_PARSER_MAX_FLAGS
-#define C_ARGV_PARSER_MAX_FLAGS 1000
+#ifndef C_ARGV_PARSER_MAX_ARGS
+#define C_ARGV_PARSER_MAX_ARGS 1000
 #endif
 
 #define C_ARGV_PARSER_NULL (void*)0

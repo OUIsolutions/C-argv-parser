@@ -8,7 +8,7 @@
 
 typedef struct CArgvParse{
 
-    int used_args[C_ARGV_PARSER_MAX_FLAGS];
+    int used_args[C_ARGV_PARSER_MAX_ARGS];
     int total_used_args;
      char **args;
     int total_args;
