@@ -2,8 +2,12 @@
 #ifndef C_ARGV_PARSER_MAX_ARGS
 #define C_ARGV_PARSER_MAX_ARGS 1000
 #endif
+#ifdef __cplusplus
+#define C_ARGV_PARSER_NULL nullptr
+#else
+#define C_ARGV_PARSER_NULL ((void*)0)
+#endif 
 
-#define C_ARGV_PARSER_NULL (void*)0
 
 typedef unsigned char c_argv_bool;
 
