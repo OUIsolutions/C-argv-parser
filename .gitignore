@@ -7,7 +7,7 @@ teste.c
 *.obj
 *.elf
 src/imports
-
+release
 # Linker output
 *.ilk
 *.map
