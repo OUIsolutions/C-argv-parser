@@ -18,6 +18,9 @@ void private_CArgvParse_add_used(CArgvParse *self,int index){
     if(private_CArgvParse_its_used(self,index)){
         return;
     }
+    if(self->total_used_args >= C_ARGV_PARSER_MAX_FLAGS){
+        return;
+    }
     self->used_args[self->total_used_args] = index;
     self->total_used_args++;
 }
