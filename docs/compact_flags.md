@@ -25,7 +25,7 @@ int main(int argc, char *argv[]){
 ```
 if  you run with:
 ```bash
-./a.out    name:mateus name:samuel 
+./a.out    name:mateus name=samuel 
 ```
 your output will be:
 
