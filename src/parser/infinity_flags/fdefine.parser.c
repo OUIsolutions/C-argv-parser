@@ -6,12 +6,12 @@
 //silver_chain_scope_end
 
 
-int CArgvPars_get_infinity_flag_size(CArgvParse *self,const char **flags,int flags_size){
+int CArgvParse_get_infinity_flag_size(CArgvParse *self,const char **flags,int flags_size){
   return 0;
 }    
 
 
-const char * CArgvPars_get_infinty_flag(CArgvParse *self ,const char **flags,int flags_size, int index){
+const char * CArgvParse_get_infinty_flag(CArgvParse *self ,const char **flags,int flags_size, int index){
     int found=0;
     int flag_found_index = -1;
     c_argv_bool inside_flag = C_ARGV_PARSER_FALSE;
