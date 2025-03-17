@@ -41,4 +41,4 @@ only_definition = lincense .. only_definition
 
 darwin.dtw.write_file("release/CArgvParse.c", only_definition)
 
-os.execute("zip -r release/CArgvParse.zip dependencies src build")
+os.execute("zip -r release/CArgvParse.zip dependencies src darwinconf.lua")
