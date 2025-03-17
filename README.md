@@ -16,10 +16,10 @@ it does not include any other header files or libraries, it is a single file tha
 
 | item          | What Is |
 |-------        |-----------|
-| [CArgvParse.zip](https://github.com/OUIsolutions/C-argv-parser/releases/download/0.0.1/CArgvParse.zip)| Full Folder Mode  |
-| [CArgvParseOne.c](https://github.com/OUIsolutions/C-argv-parser/releases/download/0.0.1/CArgvParseOne.c)| Single File Version|
-| [CArgvParse.h](https://github.com/OUIsolutions/C-argv-parser/releases/download/0.0.1/CArgvParse.h)|Declaration |
-| [CArgvParse.c](https://github.com/OUIsolutions/C-argv-parser/releases/download/0.0.1/CArgvParse.c)|Definition |
+| [CArgvParse.zip](https://github.com/OUIsolutions/C-argv-parser/releases/download/0.0.2/CArgvParse.zip)| Full Folder Mode  |
+| [CArgvParseOne.c](https://github.com/OUIsolutions/C-argv-parser/releases/download/0.0.2/CArgvParseOne.c)| Single File Version|
+| [CArgvParse.h](https://github.com/OUIsolutions/C-argv-parser/releases/download/0.0.2/CArgvParse.h)|Declaration |
+| [CArgvParse.c](https://github.com/OUIsolutions/C-argv-parser/releases/download/0.0.2/CArgvParse.c)|Definition |
 
 # Documentation
 
