@@ -17,5 +17,7 @@ CArgvParseNamespace newCArgvParseNamespace(){
     self.is_one_of_args_present = CArgvParse_is_one_of_args_present;
     self.get_infinity_flag_size = CArgvParse_get_infinity_flag_size;
     self.get_infinty_flag = CArgvParse_get_infinty_flag;
+    self.get_compact_flag_size = CArgvParse_get_compact_flag_size;
+    self.get_compact_flag = CArgvParse_get_compact_flag;
     return self;   
 }
