@@ -1,3 +1,9 @@
+//silver_chain_scope_start
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
+#include "../../imports/imports.globals.h"
+//silver_chain_scope_end
 
 
 c_argv_bool private_CArgvParse_its_used(CArgvParse *self,int index){
@@ -28,4 +34,21 @@ const char *CArgvParse_get_next_unused_arg(CArgvParse *self){
         }
     }
     return C_ARGV_PARSER_NULL;
+}
+
+long long CArgvParse_get_next_unused_arg_number(CArgvParse *self){
+    return privateArgv_parser_string_to_long_long(CArgvParse_get_next_unused_arg(self));
+}
+
+short CArgvParse_get_next_unused_arg_bool(CArgvParse *self){
+    const char *response = CArgvParse_get_next_unused_arg(self);
+    short true_bool = privateArgv_parser_string_cmp(response, "true");
+    short True_bool = privateArgv_parser_string_cmp(response, "True");
+    short TRUE_bool = privateArgv_parser_string_cmp(response, "TRUE");
+
+    if(true_bool || True_bool || TRUE_bool){
+        return 1;
+    }
+
+    return 0;
 }

@@ -1,3 +1,9 @@
+//silver_chain_scope_start
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
+#include "../../imports/imports.globals.h"
+//silver_chain_scope_end
 
 
 
@@ -19,6 +25,23 @@ const char *CArgvParse_get_arg(CArgvParse *self,int index){
         return self->args[index];
     }
     return C_ARGV_PARSER_NULL;
+}
+
+long long CArgvParse_get_arg_number(CArgvParse *self, int index){
+    return privateArgv_parser_string_to_long_long(CArgvParse_get_arg(self, index));
+}
+
+short CArgvParse_get_arg_bool(CArgvParse *self, int index){
+    const char *response = CArgvParse_get_arg(self, index);
+    short true_bool = privateArgv_parser_string_cmp(response, "true");
+    short True_bool = privateArgv_parser_string_cmp(response, "True");
+    short TRUE_bool = privateArgv_parser_string_cmp(response, "TRUE");
+
+    if(true_bool || True_bool || TRUE_bool){
+        return 1;
+    }
+
+    return 0;
 }
 
 c_argv_bool CArgvParse_is_flags_present(CArgvParse *self,const char **flags,int flags_size){
