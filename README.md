@@ -21,3 +21,20 @@ it does not include any other header files or libraries, it is a single file tha
 | [CArgvParse.h](https://github.com/OUIsolutions/C-argv-parser/releases/download/0.0.1/CArgvParse.h)|Declaration |
 | [CArgvParse.c](https://github.com/OUIsolutions/C-argv-parser/releases/download/0.0.1/CArgvParse.c)|Definition |
 
+# Documentation
+
+| Item          | What It Is |
+|-------        |-----------|
+| [Build](/docs/build_and_install.md)| Build and Install |
+| [Basic](/docs/basic.md)| Basic Usage |
+| [Flags](/docs/flags.md)| Flags Usage|
+| [Compact Flags](/docs/compact_flags.md)| Compact Flags Usage|
+| [Infinite Flags](/docs/infinite_flags.md)| Infinite Flags Usage|
+| [Unused Flags](/docs/unused_flags.md)| Unused Flags Detection|
+
+
+# Build Toolchain
+
+* [Darwin](https://github.com/OUIsolutions/Darwin)
+* [Silver Chain](https://github.com/OUIsolutions/SilverChain)
+* [CAmalgamator](https://github.com/OUIsolutions/CAmalgamator)
